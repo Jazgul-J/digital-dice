@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Digital Dice</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 100px;
+    background-color: #f7f7f7;
+  }
+  #dice {
+    font-size: 120px;
+    margin: 20px 0;
+  }
+  button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    border-radius: 10px;
+  }
+  button:hover {
+    background-color: #27ae60;
+  }
+</style>
+</head>
+<body>
+
+<h1>Digital Dice</h1>
+<div id="dice">🎲</div>
+<button onclick="rollDice()">Roll Dice</button>
+
+<script>
+  function rollDice() {
+    const diceNumber = Math.floor(Math.random() * 6) + 1;
+    const diceDiv = document.getElementById('dice');
+    diceDiv.textContent = diceNumber;
+  }
+</script>
+
+</body>
+</html>
